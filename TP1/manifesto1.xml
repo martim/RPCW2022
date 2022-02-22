@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC1- Criação Página Web</titulo>
+        <data>2022-02-15</data>
+        <autor>
+            <id>PG47514</id>
+            <nome>Martim Bento da Rocha de Almeida</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Criação de uma página web sobre jacaré, com a sofisticação desejada.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <xref>
+                <url>index.html</url>
+                <texto>Página Web</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>w3.css</url>
+                <texto>Stylesheet utilizada para o TPC</texto>
+            </xref>
+        l</resultado>
+    </resultados>
+</doc>
