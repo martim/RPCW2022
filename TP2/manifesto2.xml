@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC2- Criação Servidor Web</titulo>
+        <data>2022-02-22</data>
+        <autor>
+            <id>PG47514</id>
+            <nome>Martim Bento da Rocha de Almeida</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Criação de um servidor web que disponibiliza um website com informação de filmes e atores retirados de um ficheiro JSON.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <xref>
+                <url>fileserver.js</url>
+                <texto>Servidor Web em Javascript</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>parsing.py</url>
+                <texto>Ficheiro python que realiza o parsing do ficheiro JSON e gera as páginas com a informação resultante</texto>
+            </xref>
+        l</resultado>
+    </resultados>
+</doc>
