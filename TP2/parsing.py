@@ -10,23 +10,30 @@ def criar_pagina_filme(filme_id, filme, atores):
         <title>{filme['title']}</title>
     </head>
     <body>
-        <h1><b>{filme['title']}</b></h1>
-        <ul>
-            <li><b>Ano</b>: {filme['year']}</li>
-            <li><b>Elenco</b>:
-                <ul>
-                ''')
+        <div class="w3-container w3-padding-16">
+            <div class="w3-container">
+                <h1 class="w3-center w3-blue w3-padding-32 w3-text-black"><b>{filme['title']}</b></h1>
+                <ul class="w3-ul w3-card-0 w3-hoverable">
+                    <li class="w3-padding-medium"><b>Ano</b>: {filme['year']}</li>
+                    <li class="w3-padding-medium"><b>Elenco</b>:
+                        <ul class="w3-ul w3-card-0 w3-hoverable">
+                        ''')
     for ator in sorted(filme['cast']):
-        f.write(f'''\t<li><a href="http://localhost:7777/atores/{atores[ator]['id']}">{ator}</a></li>\n\t\t\t\t''')
+        f.write(f'''\t<li class="w3-padding-medium"><a href="http://localhost:7777/atores/{atores[ator]['id']}">{ator}</a></li>\n\t\t\t\t\t\t''')
     f.write(f'''</ul>
-            </li>
-            <li><b>Género</b>:
-                <ul>''')
+                    </li>
+                    <li class="w3-padding-medium"><b>Género</b>:
+                        <ul class="w3-ul w3-card-0 w3-hoverable">
+                        ''')
     for genero in filme['genres']:
-        f.write(f'''\n\t\t\t\t\t<li>{genero}</li>''')
-    f.write(f'''\n\t\t\t\t</ul>
-    \t\t</li>
-    \t</ul>
+        f.write(f'''\t<li class="w3-padding-medium">{genero}</li>\n\t\t\t\t\t\t''')
+    f.write(f'''</ul>
+                    </li>
+                </ul>
+                <hr>
+                <a href="http://localhost:7777/filmes" class="w3-button w3-blue w3-border-black">Voltar para lista de Filmes</a>
+            </div>
+        </div>
     </body>
 </html>''')
     
@@ -41,13 +48,19 @@ def criar_pagina_ator(ator_nome, ator):
         <title>{ator_nome}</title>
     </head>
     <body>
-        <h1><b>{ator_nome}</b></h1>
-        <h3><b>Participa em:</b></h3>
-        <ul>
-        ''')
+        <div class="w3-container w3-padding-16">
+            <div class="w3-container">
+                <h1 class="w3-center w3-blue w3-padding-32 w3-text-black"><b>{ator_nome}</b></h1>
+                <h3 class="w3-padding-16"><b>Participa em:</b></h3>
+                <ul class="w3-ul w3-card-0 w3-hoverable">
+                ''')
     for filme in filmes_sorted:
-         f.write(f'''\t<li><a href="http://localhost:7777/filmes/{filme['id']}">{filme['title']}</a></li>\n\t\t''')
+         f.write(f'''\t<li class="w3-padding-medium"><a href="http://localhost:7777/filmes/{filme['id']}">{filme['title']}</a></li>\n\t\t\t\t''')
     f.write(f'''</ul>
+                <hr>
+                <a href="http://localhost:7777/atores" class="w3-button w3-blue w3-border-black">Voltar para lista de Atores</a>
+            </div>
+        </div>
     </body>
 </html>''')
 
@@ -62,12 +75,16 @@ def criar_pagina_principal_filmes(filmes):
         <title>Lista de Filmes</title>
     </head>
     <body>
-        <h1><b>Lista de Filmes</b></h1>
-        <ul>
-        ''')
+        <div class="w3-container w3-padding-16">
+            <div class="w3-container">
+                <h1 class="w3-center w3-blue w3-padding-32 w3-text-black"><b>Lista de Filmes</b></h1>
+                <ul class="w3-ul w3-card-0 w3-hoverable">
+                ''')
     for filme in filmes_sorted:
-         f.write(f'''\t<li><a href="http://localhost:7777/filmes/{filme}">{filmes_sorted[filme]['title']}</a></li>\n\t\t''')
+         f.write(f'''\t<li class="w3-padding-medium"><a href="http://localhost:7777/filmes/{filme}">{filmes_sorted[filme]['title']}</a></li>\n\t\t\t\t''')
     f.write(f'''</ul>
+            </div>
+        </div>
     </body>
 </html>''')
 
@@ -82,12 +99,16 @@ def criar_pagina_principal_atores(atores):
         <title>Lista de Atores</title>
     </head>
     <body>
-        <h1><b>Lista de Atores</b></h1>
-        <ul>
-        ''')
+        <div class="w3-container w3-padding-16">
+            <div class="w3-container">
+                <h1 class="w3-center w3-blue w3-padding-32 w3-text-black"><b>Lista de Atores</b></h1>
+                <ul class="w3-ul w3-card-0 w3-hoverable">
+                ''')
     for ator in atores_sorted:
-         f.write(f'''\t<li><a href="http://localhost:7777/atores/{atores_sorted[ator]['id']}">{ator}</a></li>\n\t\t''')
+         f.write(f'''\t<li class="w3-padding-medium"><a href="http://localhost:7777/atores/{atores_sorted[ator]['id']}">{ator}</a></li>\n\t\t\t\t''')
     f.write(f'''</ul>
+            </div>
+        </div>
     </body>
 </html>''')
 

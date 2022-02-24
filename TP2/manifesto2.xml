@@ -27,6 +27,12 @@
                 <url>parsing.py</url>
                 <texto>Ficheiro python que realiza o parsing do ficheiro JSON e gera as páginas com a informação resultante</texto>
             </xref>
-        l</resultado>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>404.html</url>
+                <texto>Página html de erro 404</texto>
+            </xref>
+        </resultado>
     </resultados>
 </doc>
