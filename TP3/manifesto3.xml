@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC3 - Servidor com API de dados</titulo>
+        <data>2022-03-07</data>
+        <autor>
+            <id>PG47514</id>
+            <nome>Martim Bento da Rocha de Almeida</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Criação de um servidor web que disponibiliza um website com informação de uma escola de música, cujos dados se encontram numa API.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <xref>
+                <url>server.js</url>
+                <texto>Servidor Web em Javascript</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>db.json</url>
+                <texto>Base de dados</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>package.json</url>
+                <texto>Ficheiro JSON com dependências do servidor</texto>
+            </xref>
+        </resultado>
+    </resultados>
+</doc>
