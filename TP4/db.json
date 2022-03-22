@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 0,
+      "task": "Clean room",
+      "type": "House",
+      "owner": "Martim",
+      "deadline": "2022-03-22",
+      "created": "2022-03-21",
+      "status": "todo"
+    },
+    {
+      "id": 1,
+      "task": "Do Homework",
+      "type": "School",
+      "owner": "Juvenaldo",
+      "deadline": "2022-03-22",
+      "created": "2022-03-15",
+      "status": "done"
+    }
+  ]
+}

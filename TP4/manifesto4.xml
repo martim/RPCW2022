@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC4 - Single Page Application</titulo>
+        <data>2022-03-15</data>
+        <autor>
+            <id>PG47514</id>
+            <nome>Martim Bento da Rocha de Almeida</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Criação de um servidor web que disponibiliza uma Single Page Application de uma To-Do List.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <xref>
+                <url>static.js</url>
+                <texto>Funções de conteúdo estático da página</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>toDO.js</url>
+                <texto>Servidor Web</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>db.json</url>
+                <texto>Base de dados</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>package.json</url>
+                <texto>Ficheiro JSON com dependências do servidor</texto>
+            </xref>
+        </resultado>
+    </resultados>
+</doc>

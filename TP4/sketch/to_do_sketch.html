@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../public/w3.css">
+    </head>
+    <body>
+        <div class="w3-container w3-padding-16">
+            <div class="w3-container w3-center w3-orange">
+                <h1><b>To-Do List</b></h1>
+            </div>
+            <div class="w3-container w3-padding-16 w3-light-grey">
+                <form class="w3-container" action="/tasks" method="POST">
+                    <label class="w3-text-orange"><b>Task:</b></label>
+                    <input class="w3-input w3-border w3-light-grey" type="text" name="task">
+                    <br>
+                    <label class="w3-text-orange"><b>Task Type:</b></label>
+                    <input class="w3-input w3-border w3-light-grey" type="text" name="type">
+                    <br>
+                    <label class="w3-text-orange"><b>Responsible:</b></label>
+                    <input class="w3-input w3-border w3-light-grey" type="text" name="owner">
+                    <br>
+                    <label class="w3-text-orange"><b>Deadline:</b></label>
+                    <input class="w3-input w3-border w3-light-grey" type="text" name="deadline">
+                    <br>
+                    <input class="w3-btn w3-orange" type="submit" value="Register"/>
+                    <input class="w3-btn w3-orange" type="reset" value="Clear"/> 
+                </form>
+            </div>
+            <div class="w3-row w3-container w3-padding-16">
+                <div class="w3-half w3-container w3-padding-16">
+                    <h3 class="w3-center w3-orange">Tasks To-Do</h3>
+                    <ul class="w3-ul w3-card-4">
+                        <li class="w3-bar">
+                            <span class="w3-right">
+                                <div class="w3-cell-row">
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/done" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Done</button>
+                                        </form>
+                                    </div>
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/delete" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="w3-bar-item">
+                                <span>Task - Type</span>
+                                <br>
+                                <span>Responsável</span>
+                                <br>
+                                <span>Until date</span>
+                            </div>    
+                        </li>
+                        <li class="w3-bar">
+                            <span class="w3-right">
+                                <div class="w3-cell-row">
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/done" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Done</button>
+                                        </form>
+                                    </div>
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/delete" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="w3-bar-item">
+                                <span>Task - Type</span>
+                                <br>
+                                <span>Responsável</span>
+                                <br>
+                                <span>Until date</span>
+                            </div>    
+                        </li>                        
+                    </ul>
+                </div>
+                <div class="w3-half w3-container w3-padding-16">
+                    <h3 class="w3-center w3-orange">Tasks Done</h3>
+                    <ul class="w3-ul w3-card-4">
+                        <li class="w3-bar">
+                            <span class="w3-right">
+                                <div class="w3-cell-row">
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/undo" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Undo</button>
+                                        </form>
+                                    </div>
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/delete" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="w3-bar-item">
+                                <span>Task - Type</span>
+                                <br>
+                                <span>Responsável</span>
+                                <br>
+                                <span>Until date</span>
+                            </div>    
+                        </li>
+                        <li class="w3-bar">
+                            <span class="w3-right">
+                                <div class="w3-cell-row">
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/undo" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Undo</button>
+                                        </form>
+                                    </div>
+                                    <div class="w3-cell">
+                                        <form action="/tasks/id/delete" method="POST">
+                                            <button class="w3-btn w3-orange" type="submit">Delete</button>
+                                        </form>                                    
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="w3-bar-item">
+                                <span>Task - Type</span>
+                                <br>
+                                <span>Responsável</span>
+                                <br>
+                                <span>Until date</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
