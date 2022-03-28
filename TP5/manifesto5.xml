@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC5 - Arquivo Sonoro</titulo>
+        <data>2022-03-29</data>
+        <autor>
+            <id>PG47514</id>
+            <nome>Martim Bento da Rocha de Almeida</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Criação de um servidor NodeJS que disponibiliza a visualização de um Arquivo Sonoro.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <xref>
+                <url>app.js</url>
+                <texto>Serviço que responde aos pedidos e que realiza a comunicação com o json-server e com os roteadores do express.</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>arq-son.json</url>
+                <texto>Dataset do Arquivo Sonoro</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>set_id.py</url>
+                <texto>Script de python que insere um identificador a cada música presente no dataset do arquivo sonoro.</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>package.json</url>
+                <texto>Ficheiro JSON com dependências do servidor</texto>
+            </xref>
+        </resultado>
+    </resultados>
+</doc>

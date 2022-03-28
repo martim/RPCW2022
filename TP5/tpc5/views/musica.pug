@@ -1,0 +1,33 @@
+doctype html 
+html 
+    head 
+        title Música #{musica.id} 
+        link(rel='stylesheet', href='/stylesheets/w3.css')
+        link(rel='icon', href='/images/favicon.png')
+    body
+        div(class="w3-container w3-padding-16")
+            div(class="w3-container w3-padding-16 w3-center w3-orange")
+                h1 Música #{musica.id} - #{musica.tit}
+            br
+            p
+              b ID : 
+                span= musica.id
+            p
+              b Título : 
+                span= musica.tit
+            p
+              b Duração : 
+                span= musica.duracao
+            p
+              b Músico : 
+                span= musica.musico
+            p
+              b Província : 
+                span= musica.prov
+            p
+              b Local : 
+                span= musica.local
+            div(class="w3-center")
+              p
+                a(href='/', class="w3-btn w3-orange") Voltar
+            
