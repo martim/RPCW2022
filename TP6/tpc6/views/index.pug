@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  div(class="w3-container w3-padding-16")
+    div(class="w3-container w3-center w3-orange")
+        h1 
+          b Archive Management
+    div(class="w3-container w3-padding-16 w3-light-grey")
+      form(class="w3-container" action="/archive" method="POST" enctype="multipart/form-data")
+        label(class="w3-text-orange")
+          b Select File
+        input(class="w3-input w3-border w3-light-grey" type="file" name="myArchive")
+        br
+        label(class="w3-text-orange")
+          b Description
+        input(class="w3-input w3-border w3-light-grey" type="text" name="description" placeholder="Description")
+        br
+        input(class="w3-btn w3-orange" type="submit" value="Submit")
+    div(class="w3-container w3-padding-16")
+      div(class="w3-container w3-padding-16")
+        h3(class="w3-center w3-orange") 
+          b Archives
+        if list.length > 0
+          table(class="w3-table w3-centered w3-hoverable")
+            tr(class="w3-orange")
+              th Date
+              th Name
+              th Type
+              th Size 
+              th Description
+            each archive in list
+              td= archive.date
+              td= archive.name
+              td= archive.mimetype
+              td= archive.size
+              td= archive.description
+              td
+                a(href="/delete/"+archive._id class="w3-btn w3-orange") Delete
+        else 
+          div(class="w3-container w3-padding-16 w3-center")
+            h4 No Archive available

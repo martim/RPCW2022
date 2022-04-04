@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC6 - Gestor de Ficheiros</titulo>
+        <data>2022-03-29</data>
+        <autor>
+            <id>PG47514</id>
+            <nome>Martim Bento da Rocha de Almeida</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Criação de um servidor NodeJS responsável pela gestão de ficheiros resultantes de um upload.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <xref>
+                <url>app.js</url>
+                <texto>Serviço que responde aos pedidos e que realiza a comunicação com o MongoDB e com os roteadores do Express.</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>package.json</url>
+                <texto>Ficheiro JSON com dependências do servidor</texto>
+            </xref>
+        </resultado>
+    </resultados>
+</doc>
