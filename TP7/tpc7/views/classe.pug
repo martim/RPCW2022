@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    div(class="w3-container w3-padding-16")
+        div(class="w3-container w3-blue w3-center")
+            h1 
+                b #{classe.titulo}
+        div(class="w3-container w3-padding-16")
+            div(class="w3-container w3-padding-16 w3-light-grey")
+                ul(class="w3-ul w3-card-4")
+                    li 
+                        b Descrição: 
+                        | #{classe.descricao}
+                    li 
+                        b Nível: 
+                        | #{classe.nivel}
+                    li 
+                        b Código: 
+                        | #{classe.codigo}
+                    li 
+                        b Descendentes:
+                        ul(class="w3-ul w3-hoverable")
+                            each filho in classe.filhos
+                                li
+                                    a(href="/" + filho.codigo)= filho.codigo + ": " + filho.titulo
+                    li 
+                        b Processos Relacionados:
+                        ul(class="w3-ul w3-hoverable")
+                            each processo in classe.processosRelacionados
+                                if processo.idRel == "eCruzadoCom" || processo.idRel == "eComplementarDe" || processo.idRel == "eSuplementoDe" || processo.idRel == "eSuplementoPara"
+                                    li
+                                        a(href="/" + processo.codigo)= processo.codigo + ": " + processo.titulo
+            br
+            footer
+                div(class="w3-bar")
+                    if classe.nivel > 1
+                        a(href="/" + classe.pai.codigo class="w3-button w3-blue w3-left") Página Anterior
+                    a(href="/" class="w3-button w3-blue w3-right") Página Inicial
