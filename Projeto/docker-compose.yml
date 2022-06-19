@@ -1,0 +1,32 @@
+version: "3"
+services:
+  rrd-auth:
+    restart: always
+    depends_on:
+      - mongo
+    image: martimwastaken/rrd:rrd-auth
+    ports:
+      - 4050:4050
+  rrd-api:
+    restart: always
+    depends_on:
+      - mongo
+    image: martimwastaken/rrd:rrd-api
+    ports:
+      - 4040:4040
+  rrd-app:
+    restart: always
+    image: martimwastaken/rrd:rrd-app
+    ports:
+      - 4030:4030
+    volumes:
+      - appfs:/usr/src/app/
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+volumes:
+  mongodb:
+  appfs:

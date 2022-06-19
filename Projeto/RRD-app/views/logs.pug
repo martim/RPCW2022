@@ -1,0 +1,23 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+  .w3-container.w3-margin
+    .w3-card-4
+      header.w3-container.mobile.w3-teal
+        a(href= '/' style="text-decoration: none")
+          h1 Repositório de Recursos Didáticos
+      .w3-container.w3-padding-16.w3-mobile
+        .w3-container.w3-pale-blue.w3-center.w3-mobile
+          h2 Histórico de Notícias
+        ul.w3-ul.w3-card-4
+          for l in list
+            li.w3-bar.w3-hover-gray
+              .w3-bar-item
+                  span(class="w3-large")= l.content
+                  br
+                  span= l.date
+        p
+          a(href= '/' class="w3-button w3-teal w3-hover-gray w3-round-large") Voltar
+          

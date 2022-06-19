@@ -1,0 +1,58 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+  .w3-container.w3-margin
+    .w3-card-4
+      header.w3-container.mobile.w3-teal
+        a(href= '/' style="text-decoration: none")
+          h1 Repositório de Recursos Didáticos
+      .w3-container.w3-padding-16.w3-mobile
+        .w3-container.w3-pale-blue.w3-center.w3-mobile
+          h2= recurso.title
+        form(class="w3-container" action="/recursos/editfields/"+recurso._id method="POST" enctype="multipart/form-data")
+          .w3-row.w3-margin-bottom
+            label.w3-text-teal Título
+            input.w3-input(type='text' name='title' value=recurso.title)
+            label.w3-text-teal Tipo
+            input.w3-input(type='text' name='type' value=recurso.type)
+            label.w3-text-teal Visibilidade
+            if(recurso.isVis)
+              br
+              input.w3-radio(type='radio' name='vis' value="publica" checked)
+              label.w3-text-teal  Pública
+              br
+              input.w3-radio(type='radio' name='vis' value="privada")
+              label.w3-text-teal  Privada
+            else
+              br
+              input.w3-radio(type='radio' name='vis' value="publica")
+              label.w3-text-teal  Pública
+              br
+              input.w3-radio(type='radio' name='vis' value="privada" checked)
+              label.w3-text-teal  Privada
+
+          .w3-row.w3-margin-bottom
+            input(class="w3-btn w3-round-larg w3-blue-grey" type="submit" value="Atualizar Campos")
+        .w3-row.w3-margin-bottom
+          ul.w3-ul.w3-card-4
+            each f in recurso.files 
+              li
+                .w3-bar
+                  .w3-bar-item
+                    span(class="w3-large")= f.name
+                  .w3-bar-item.w3-right
+                    form(action="/recursos/"+recurso._id+"/removefile/"+f._id method="POST")
+                      button.w3-button.w3-round-large.w3-teal.w3-hover-red(type="submit") Remover
+        .w3-row.w3-margin-bottom
+          form(class="w3-container" action="/recursos/"+recurso._id+"/addfile/" method="POST" enctype="multipart/form-data")
+            .w3-row.w3-margin-bottom
+              .div(id="filesDiv")
+                label(class="w3-text-teal")
+                  b Selecionar ficheiro
+                input(class="w3-input w3-border w3-light-grey" type="file" name="myFile")
+              .w3-row.w3-margin-bottom
+              input(class="w3-btn w3-round-larg w3-blue-grey" type="submit" value="Adicionar Ficheiro")
+        p
+          a(href= '/recursos/' class="w3-button w3-teal w3-hover-gray w3-round-large") Voltar

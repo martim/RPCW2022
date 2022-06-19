@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .w3-container.w3-margin
+    .w3-card-4
+      header.w3-container.mobile.w3-teal
+        a(href= '/' style="text-decoration: none")
+          h1 Repositório de Recursos Didáticos
+      .w3-container.w3-padding-16.w3-mobile.w3-center
+        h2 Bem-vindo ao Repositório de Recursos Didáticos!
+        .w3-bar
+          if(token.level=="consumer")
+            .w3-bar-item
+              form(action="/register" method="GET")
+                button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                  h5 Registar
+            .w3-bar-item
+              form(action="/login" method="GET")
+                button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                  h5 Login
+          .w3-bar-item
+            form(action="/recursos/" method="GET")
+              button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                h5 Listar Recursos
+          if(token.level=="producer")
+            .w3-bar-item
+              form(action="/recursos/add" method="GET")
+                button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                  h5 Adicionar Recurso
+            .w3-bar-item
+              form(action="/logout" method="POST")
+                button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                  h5 Logout
+          if(token.level=="admin")
+            .w3-bar-item
+              form(action="/recursos/add" method="GET")
+                button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                  h5 Adicionar Recurso
+            .w3-bar-item
+              form(action="/logs" method="GET")
+                button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                  h5 Histórico de Notícias
+            .w3-bar-item
+              form(action="/logout" method="POST")
+                button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit")
+                  h5 Logout

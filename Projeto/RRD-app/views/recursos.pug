@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  .w3-container.w3-margin
+    .w3-card-4
+      header.w3-container.mobile.w3-teal
+        a(href= '/' style="text-decoration: none")
+          h1 Repositório de Recursos Didáticos
+      .w3-container.w3-padding-16.w3-mobile
+        .w3-container.w3-pale-blue.w3-center.w3-mobile
+          h2 Lista de ficheiros
+        if list.length > 0
+            table.w3-table-all
+              tr 
+                th Data de submissão
+                th Título
+                th Tipo
+                th Submetido por
+              each f in list
+                tr
+                  td= f.subDate
+                  td= f.title
+                  td= f.type
+                  td= f.prodId
+                  td
+                    form(action="/recursos/"+f._id method="GET")
+                      button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit") Visualizar
+                  td
+                    form(action="/recursos/download/"+f._id method="GET")
+                      button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit") Download
+                  if (token.level == "admin" || (token.level=="producer" && f.prodId == token.username))
+                    td
+                      form(action="/recursos/edit/"+f._id method="GET")
+                        button.w3-button.w3-round-large.w3-teal.w3-hover-gray(type="submit") Editar
+                  else
+                    td
+                  if (token.level == "admin")
+                    td
+                      form(action="/recursos/delete/"+f._id method="POST")
+                        button.w3-button.w3-round-large.w3-teal.w3-hover-red(type="submit") Remover
+        else
+          .w3-container
+            p There are no files...
+        p
+          a(href= '/' class="w3-button w3-teal w3-hover-gray w3-round-large") Voltar
